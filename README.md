@@ -33,7 +33,11 @@ then a child module is created and the minimal command is used to obtain a modul
 
 ```
 ng new --minimal --skip-git --routing Marketing
+```
+# implementation of the dependency @angular-architects/module-federation.
 
-``
+_The "@angular-architects/module-federation" dependency is a package provided by Angular Architects that simplifies the configuration of module federation in Angular applications.
+
+Module federation is a technique that allows modules and components to be shared efficiently between applications or microfrontends. This specific dependency provides an API and tools to configure module federation more easily in Angular projects._
 
 
