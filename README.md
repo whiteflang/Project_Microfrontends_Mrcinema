@@ -8,7 +8,7 @@ _This project aims to implement the microfrontend architecture, which facilitate
 + [angular-architects/module-federation](https://www.npmjs.com/package/@angular-architects/module-federation).
 - [The Microfrontend Revolution: Module Federation with Angular](https://www-angulararchitects-io.translate.goog/aktuelles/the-microfrontend-revolution-part-2-module-federation-with-angular/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=es-419)
 
-##Pre-requisitos: 🤌
+## Pre-requisitos: 🤌
 - npm 
 - Angular CLI 12 or higher (13, 14, 15, 16)
 
