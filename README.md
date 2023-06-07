@@ -4,5 +4,6 @@ _This project aims to implement the microfrontend architecture, which facilitate
 
 # Documentation used for this projec. 📋 #
 
-AngularCLI[https://angular.io/cli].
-angular-architects/module-federation[https://www.npmjs.com/package/@angular-architects/module-federation].
++AngularCLI [https://angular.io/cli].
++angular-architects/module-federation [https://www.npmjs.com/package/@angular-architects/module-federation].
++The Microfrontend Revolution: Module Federation with Angular (https://www-angulararchitects-io.translate.goog/aktuelles/the-microfrontend-revolution-part-2-module-federation-with-angular/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=es-419)
