@@ -42,3 +42,13 @@ _Module federation is a technique that allows modules and components to be share
 
 
 **The command adds the configuration to the parent container, taking into account the 'port:8080' and specifying the 'type:host', indicating that this module will control and inject any child containers that are created.**
+
+```
+ng g @angular-architects/module-federation:init --project container--port 8080 --type host
+```
+
+**repeats the process whit the module child marketing**
+```
+ ng g @angular-architects/module-federation:init --project marketing --port 8081 --type remote
+```
+
