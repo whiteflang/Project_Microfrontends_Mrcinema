@@ -41,3 +41,4 @@ _The "@angular-architects/module-federation" dependency is a package provided by
 _Module federation is a technique that allows modules and components to be shared efficiently between applications or microfrontends. This specific dependency provides an API and tools to configure module federation more easily in Angular projects._
 
 
+**The command adds the configuration to the parent container, taking into account the 'port:8080' and specifying the 'type:host', indicating that this module will control and inject any child containers that are created.**
