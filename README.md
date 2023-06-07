@@ -54,7 +54,7 @@ ng g @angular-architects/module-federation:init --project container--port 8080 -
 ```
 
 ##Switch into the project marketing and open the generated configuration file projects\marketing\webpack.config.js. It contains the module federation configuration for marketing. Adjust it as follows: 
-```
+```javascript
  const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
 
 module.exports = withModuleFederationPlugin({
