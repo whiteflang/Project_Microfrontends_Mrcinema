@@ -49,6 +49,27 @@ ng g @angular-architects/module-federation:init --project container--port 8080 -
 
 **repeats the process whit the module child marketing**
 ```
- ng g @angular-architects/module-federation:init --project marketing --port 8081 --type remote
+ ng g @angular-architects/module-federation:init --project marketing --port 8081 --type remote}
+ 
+```
+
+##Switch into the project marketing and open the generated configuration file projects\marketing\webpack.config.js. It contains the module federation configuration for marketing. Adjust it as follows: 
+```
+ const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
+
+module.exports = withModuleFederationPlugin({
+
+  name: 'marketing',
+
+  exposes: {
+    './MoviesModule': './src/app/movies/movies.module.ts',
+  },
+
+  shared: {
+    ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
+  },
+
+});
+ 
 ```
 
