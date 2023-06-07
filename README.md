@@ -5,5 +5,6 @@ _This project aims to implement the microfrontend architecture, which facilitate
 # Documentation used for this projec. 📋 #
 
 This site was built using [GitHub Pages](https://pages.github.com/).
+[Angular CLI](https://angular.io/cli).
 
 
