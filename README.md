@@ -12,3 +12,10 @@ _This project aims to implement the microfrontend architecture, which facilitate
 - npm 
 - Angular CLI 12 or higher (13, 14, 15, 16)
 
+intall
+```
+npm install
+npm install -g @angular/cli
+
+```
+
