@@ -53,7 +53,8 @@ ng g @angular-architects/module-federation:init --project container--port 8080 -
  
 ```
 
-##Switch into the project marketing and open the generated configuration file projects\marketing\webpack.config.js. It contains the module federation configuration for marketing. Adjust it as follows: 
+## Switch into the project 'marketing' and open the generated configuration file 'projects\marketing\webpack.config.js.' It contains the module federation configuration for 'marketing'. Adjust it as follows:
+
 ```javascript
  const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
 
@@ -72,4 +73,34 @@ module.exports = withModuleFederationPlugin({
 });
  
 ```
+## Switch into the 'containe' project and open the file projects\container\webpack.config.js. Make sure, the mapping in the remotes section uses port 8080 (and hence, points to the Micro Frontend):
+
+```javascript
+
+const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
+
+module.exports = withModuleFederationPlugin({
+
+  remotes: {
+    "marketing": "http://localhost:8081/remoteEntry.js",    
+  },
+
+  shared: {
+    ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
+  },
+
+});
+
+```
+### creat new component home:
+```
+ng g c home
+```
+
+ 
+ 
+## creat new folder typings whit three documents app-:
+
+
+
 
