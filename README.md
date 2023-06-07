@@ -19,7 +19,7 @@ npm install
 npm install -g @angular/cli
 
 ```
-# create the skeleton for a module federetion config.
+# create the skeleton for a module federetion config.  	🦴 	🦴 
 
 the corresponding folder is created and then a parent named container  module is created with the command
 
@@ -34,7 +34,7 @@ then a child module is created and the minimal command is used to obtain a modul
 ```
 ng new --minimal --skip-git --routing Marketing
 ```
-# implementation of the dependency @angular-architects/module-federation.
+# implementation of the dependency @angular-architects/module-federation. 🎬
 
 _The "@angular-architects/module-federation" dependency is a package provided by Angular Architects that simplifies the configuration of module federation in Angular applications._
 
