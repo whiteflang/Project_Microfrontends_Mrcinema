@@ -34,7 +34,7 @@ then a child module is created and the minimal command is used to obtain a modul
 ```
 ng new --minimal --skip-git --routing Marketing
 ```
-# implementation of the dependency @angular-architects/module-federation. 🎬
+# 1.implementation of the dependency @angular-architects/module-federation. 🎬
 
 _The "@angular-architects/module-federation" dependency is a package provided by Angular Architects that simplifies the configuration of module federation in Angular applications._
 
@@ -53,7 +53,7 @@ ng g @angular-architects/module-federation:init --project container--port 8080 -
  
 ```
 
-## Switch into the project 'marketing' and open the generated configuration file 'projects\marketing\webpack.config.js.' It contains the module federation configuration for 'marketing'. Adjust it as follows:
+## 2.Switch into the project 'marketing' and open the generated configuration file 'projects\marketing\webpack.config.js.' It contains the module federation configuration for 'marketing'. Adjust it as follows:
 
 ```javascript
  const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
@@ -73,7 +73,7 @@ module.exports = withModuleFederationPlugin({
 });
  
 ```
-## Switch into the 'containe' project and open the file projects\container\webpack.config.js. Make sure, the mapping in the remotes section uses port 8080 (and hence, points to the Micro Frontend):
+## 3.Switch into the 'containe' project and open the file projects\container\webpack.config.js. Make sure, the mapping in the remotes section uses port 8080 (and hence, points to the Micro Frontend):
 
 ```javascript
 
@@ -92,15 +92,107 @@ module.exports = withModuleFederationPlugin({
 });
 
 ```
-### creat new component home:
+### 4.creat new component home:
 ```
 ng g c home
 ```
 
  
  
-## creat new folder typings whit three documents app-:
+## 5.creat new folder typings whit three documents 'app-rotuing.module.ts','app.module',´app.component.ts´: 
+_Within the "typings" folder, it is common to find custom type definition files that describe the interfaces and data types used in the module federation configuration. These files help ensure the integrity and consistency of communication between federated modules by providing information about the expected data structures and types of objects used._
 
+** 'app-rotuing.module.ts:
+
+```javascript
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'movies',
+    loadChildren: () => import('marketing/MoviesModule').then(m => m.MoviesModule)
+  },
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+```
+
+** 'app.module':
+
+```javascript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `
+  <ul>
+  <li><img src="../assets/angular.png" width="50"></li>
+  <li><a routerLink="/">Home</a></li>
+  <li><a routerLink="/movies/list">Movies</a></li>
+ </ul>
+  
+ <router-outlet></router-outlet>
+  `,
+  styles: []
+})
+export class AppComponent {
+  title = 'container';
+}
+
+```
+
+** ´app.component.ts´:
+
+```javascript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `
+  <ul>
+  <li><img src="../assets/angular.png" width="50"></li>
+  <li><a routerLink="/">Home</a></li>
+  <li><a routerLink="/movies/list">Movies</a></li>
+ </ul>
+  
+ <router-outlet></router-outlet>
+  `,
+  styles: []
+})
+export class AppComponent {
+  title = 'container';
+}
+
+```
+
+## Deployment Try it out 🥽📦
+
+Now, let's try it out!
+
+1. Start the `container` and `marketing` side by side in two different terminals:
+  
+   in container 
+   ```
+   ng serve 
+   
+   ```
+   
+   in marketing
+   ```
+   ng serve
+   ```
 
 
 
