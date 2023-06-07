@@ -12,10 +12,28 @@ _This project aims to implement the microfrontend architecture, which facilitate
 - npm 
 - Angular CLI 12 or higher (13, 14, 15, 16)
 
-intall
+install dependency
+
 ```
 npm install
 npm install -g @angular/cli
 
 ```
+# create the skeleton for a module federetion config.
+
+the corresponding folder is created and then a parent named container  module is created with the command
+
+```
+ng new --help
+ng new --minimal --skip-git --routing container
+
+```
+
+then a child module is created and the minimal command is used to obtain a module as simplified. 
+
+```
+ng new --minimal --skip-git --routing Marketing
+
+``
+
 
