@@ -2,39 +2,35 @@
 
 _This project aims to implement the microfrontend architecture, which facilitates the seamless integration of different technologies within a unified solution. Specifically, Angular and React will be leveraged to achieve this objective._
 
-## Documentation used for this projec. 📋 
+## Official documentation used for this project. 📋 
 
 * [Angular CLI](https://angular.io/cli).
 + [angular-architects/module-federation](https://www.npmjs.com/package/@angular-architects/module-federation).
 - [The Microfrontend Revolution: Module Federation with Angular](https://www-angulararchitects-io.translate.goog/aktuelles/the-microfrontend-revolution-part-2-module-federation-with-angular/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=es-419)
 
 ## Pre-requisites: 🤌
-- node and npm 
+- node.js and npm 
 - Angular CLI 12 or higher (13, 14, 15, 16)
 
 install dependency
 
 ```
-npm install
 npm install -g @angular/cli
-
 ```
-# create the skeleton for a module federetion config.  	🦴 	🦴 
+# Create the skeleton for a module federetion config.  	🦴 	🦴 
 
 For the Host application we use the CLI to generate an Angular Project with minimal configuration called _container_ with the following command:
 
 ```
 ng new --minimal --skip-git --routing container
-
 ```
 
 then, a Remote application should be generated with minimal configuration to create a second Angular project called _narketing_ with the following command: 
 
 ```
 ng new --minimal --skip-git --routing marketing
-
 ```
-# 1.implementation of the dependency @angular-architects/module-federation. 🎬
+## 1.implementation of the dependency @angular-architects/module-federation. 🎬
 
 _The "@angular-architects/module-federation" dependency is a package provided by Angular Architects that simplifies the configuration of module federation in Angular applications._
 
@@ -46,8 +42,7 @@ _Module federation is a technique that allows modules and components to be share
 ```
 cd container
 npm install @angular-architects/module-federation
-ng g @angular-architects/module-federation:init --project container--port 8080 --type host
-
+ng add @angular-architects/module-federation --project container --type host --port 8080
 ```
 
 **Repeat the same process with the child module marketing**
@@ -55,8 +50,7 @@ ng g @angular-architects/module-federation:init --project container--port 8080 -
 ```
 cd marketing
 npm install @angular-architects/module-federation
-ng g @angular-architects/module-federation:init --project marketing --port 8081 --type remote
- 
+ng add @angular-architects/module-federation --project marketing --type remote --port 8081
 ```
 
 ## 2.Switch into the project 'marketing' and open the generated configuration file 'projects\marketing\webpack.config.js.' It contains the module federation configuration for 'marketing'. Adjust it as follows:
@@ -77,7 +71,6 @@ module.exports = withModuleFederationPlugin({
   },
 
 });
- 
 ```
 ## 3.Switch into the 'containe' project and open the file projects\container\webpack.config.js. Make sure, the mapping in the remotes section uses port 8080 (and hence, points to the Micro Frontend):
 
@@ -96,17 +89,20 @@ module.exports = withModuleFederationPlugin({
   },
 
 });
-
 ```
-### 4.creat new component home:
+## 4.Create new component home (for both projects _marketing_ and _container_):
 
 ```
 ng g c home
-
 ```
 
-## 5.Create new folder typings whit three documents 'app-rotuing.module.ts','app.module',´app.component.ts´: 
+## 5.Create new folder typings whith an intitial declaration file (for the container): 
 _Within the "typings" folder, it is common to find custom type definition files that describe the interfaces and data types used in the module federation configuration. These files help ensure the integrity and consistency of communication between federated modules by providing information about the expected data structures and types of objects used._
+
+```javascript
+// decl.d.ts
+declare module 'marketing/MoviesModule';
+```
 
 ** 'app-rotuing.module.ts:
 
@@ -132,7 +128,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
 ```
 
 ** 'app.module':
@@ -156,7 +151,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'container';
 }
-
 ```
 
 ** ´app.component.ts´:
@@ -180,32 +174,29 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'container';
 }
-
 ```
 
-## Deployment Try it out 🥽📦
+# Deployment Try it out 🥽📦
 
 Now, let's try it out!
 
 1. Start the `container` and `marketing` side by side in two different terminals:
   
-   for container:
+for container:
 
-   ```
-   cd container
-   npm install
-   ng serve 
-   
-   ```
-   
-   for marketing:
+```
+cd container
+npm install # run this command if deploying for first time or adding/updating new packages
+ng serve 
+```
 
-   ```
-   cd marketing
-   npm install
-   ng serve
+for marketing:
 
-   ```
+```
+cd marketing
+npm install # run this command if deploying for first time or adding/updating new packages
+ng serve
+```
 
 Open your browser and navigate to http://localhost:8080 to access the _container_ application.
 
