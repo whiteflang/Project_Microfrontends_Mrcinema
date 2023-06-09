@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
   <ul>
-  <li><img src="../assets/angular.png" width="50"></li>
+  <li><img src="../assets/logo.ico" width="50"></li>
   <li><a routerLink="/">Home</a></li>
   <li><a routerLink="/movies/list">Movies</a></li>
  </ul>
