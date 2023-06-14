@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { startsWith, WebComponentWrapper, WebComponentWrapperOptions } from '@angular-architects/module-federation-tools';
 
 const routes: Routes = [
   {
@@ -13,8 +14,14 @@ const routes: Routes = [
     loadChildren: () => import('marketing/MoviesModule').then(m => m.MoviesModule)
   },
   {
-    path: 'dashboard',
-    loadChildren: () => import('dashboard/App').then(m => m.App)
+      path: 'dashboard',
+      component: WebComponentWrapper,
+      data: {
+        remoteEntry: 'http://localhost:8082/remoteEntry.js',
+        remoteName: 'backoffice',
+        exposedModule: './dashboard/App',
+        elementName: 'backoffice-app'
+      } as WebComponentWrapperOptions
   },
 ];
 
