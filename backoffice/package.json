@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@r2wc/react-to-web-component": "^2.0.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -19,8 +20,8 @@
     "webpack-cli": "^5.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -45,6 +46,7 @@
   "devDependencies": {
     "babel-loader": "^9.1.2",
     "html-webpack-plugin": "^5.5.2",
+    "react-app-rewired": "^2.2.1",
     "webpack-dev-server": "^4.15.1"
   }
 }
