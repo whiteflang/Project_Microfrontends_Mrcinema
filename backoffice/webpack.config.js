@@ -1,18 +1,7 @@
 // remote/webpack.config.js
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-const path = require("path");
-const { dependencies } = require("./package.json");
 
 module.exports = {
     entry: "./src/index",
-    mode: "development",
-    devServer: {
-      static: {
-        directory: path.join(__dirname, "public"),
-      },
-      port: 8082,
-    },
     module: {
       rules: [
         {
@@ -30,27 +19,6 @@ module.exports = {
       ],
     },
     plugins: [
-      new ModuleFederationPlugin({
-        name: "backoffice",
-        filename: "moduleEntry.js",
-        exposes: {
-          "dashboard/App": "./src/App",
-        },
-        shared: {
-          ...dependencies,
-          react: {
-            singleton: true,
-            requiredVersion: dependencies["react"],
-          },
-          "react-dom": {
-            singleton: true,
-            requiredVersion: dependencies["react-dom"],
-          },
-        },
-      }),
-      new HtmlWebpackPlugin({
-        template: "./public/index.html",
-      }),
     ],
     resolve: {
       extensions: [".js", ".jsx"],
