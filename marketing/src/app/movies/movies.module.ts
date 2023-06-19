@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { MoviesListComponent } from './pages/movies-list/movies-list.component';
 
-import { SharedModule } from '../shared/shared.module';
+import { MoviesListComponent } from './components/movies-list/movies-list.component';
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 
@@ -23,7 +27,10 @@ export const MOVIES_ROUTES: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(MOVIES_ROUTES),
-    SharedModule
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule,
   ]
 })
 export class MoviesModule { }
