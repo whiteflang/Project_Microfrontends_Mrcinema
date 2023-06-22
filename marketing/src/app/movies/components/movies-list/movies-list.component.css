@@ -1,0 +1,11 @@
+mat-toolbar {
+  background-color: rgb(17, 202, 181);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.mat-button {
+  color: white;
+}

@@ -2,14 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  template: `
-    <p>
-    <a routerLink="/list">List Movies</a>
-    </p>
-  
-  `,
-  styles: [
-  ]
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
 
