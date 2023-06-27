@@ -1,15 +1,31 @@
-const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
+const ModuleFederationPlugin = require('webpack').container.ModuleFederationPlugin;
 
-module.exports = withModuleFederationPlugin({
+module.exports = {
 
-  name: 'marketing',
-
-  exposes: {
-    './MoviesModule': './src/app/movies/movies.module.ts',
+  output: {
+    publicPath: 'http://localhost:8081/',
   },
 
-  shared: {
-    ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
-  },
+  plugins: [
+    new ModuleFederationPlugin({
+      name: 'marketing',
+      filename: 'remoteEntry.js',
 
-});
+      exposes: {
+        './MoviesModule': './src/app/movies/movies.module.ts',
+      },
+
+      shared: {
+        '@angular/core': { singleton: true, strictVersion: true },
+        '@angular/common': { singleton: true, strictVersion: true },
+        '@angular/router': { singleton: true, strictVersion: true },
+      },
+
+    })
+
+  ]
+
+} 
+
+
+
