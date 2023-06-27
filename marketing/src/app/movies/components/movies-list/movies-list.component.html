@@ -1,5 +1,9 @@
-<!-- List Movies Menu -->
-<mat-toolbar color="primary">
-  <a mat-button routerLink="/list">En Cartelera</a>
-  <a mat-button routerLink="/list2">Proximamente</a>
-</mat-toolbar>
+<ul class="navigation">
+  <li class="btn from-left">
+    <a routerLink="/list" routerLinkActive="active" title="Cartelera">Cartelera</a>
+  </li>
+  <li class="btn from-left">
+    <a routerLink="/" routerLinkActive="active" title="Próximamente">Próximamente</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
