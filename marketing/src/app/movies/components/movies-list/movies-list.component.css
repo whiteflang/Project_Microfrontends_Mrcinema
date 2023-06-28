@@ -1,11 +1,84 @@
-mat-toolbar {
-  background-color: rgb(17, 202, 181);
-  color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+/* Menu */
+ul li {
+  list-style: none;
 }
-
-.mat-button {
-  color: white;
+.navigation {
+  background-color: var(--def);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+	margin: 0;
+	padding: 0;
+}
+.navigation a {
+  margin: 0 10px;
+  color: var(--inv);
+  text-decoration: none;
+}
+.navigation a:hover {
+  text-decoration: underline;
+}
+/* Button menu animation */
+.btn {
+	position: relative;
+	padding: 0.8rem 2rem;
+	font-size: 1rem;
+	color: var(--inv);
+	-webkit-transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+	cursor: pointer;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+.btn::before, .btn::after {
+	content: '';
+	position: absolute;
+	-webkit-transition: inherit;
+	transition: inherit;
+	z-index: 1;
+}
+.btn:hover a {
+	color: var(--def);
+	-webkit-transition-delay: .5s;
+	        transition-delay: .5s;
+	z-index: 10;
+	position: relative;
+}
+.btn a {
+	color: var(--inv);
+	-webkit-transition-delay: .10s;
+	        transition-delay: .10s;
+	z-index: 10;
+	position: relative;
+}
+.btn:hover::before {
+	-webkit-transition-delay: 0s;
+	        transition-delay: 0s;
+}
+.btn:hover::after {
+	background: var(--inv);
+	-webkit-transition-delay: .35s;
+	        transition-delay: .35s;
+}
+/* From Left */
+.from-left::before,
+.from-left::after {
+	top: 0;
+	width: 0;
+	height: 100%;
+}
+.from-left::before {
+	right: 0;
+	border: 1px solid var(--inv);
+	border-left: 0;
+	border-right: 0;
+}
+.from-left::after {
+	left: 0;
+}
+.from-left:hover::before,
+.from-left:hover::after {
+	width: 100%;
 }
