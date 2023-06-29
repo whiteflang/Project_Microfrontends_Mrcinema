@@ -180,24 +180,65 @@ export class AppComponent {
 
 Now, let's try it out!
 
-1. Start the `container` and `marketing` side by side in two different terminals:
-  
+## Make sure you have latest dependencies updates before start all applications:
+
+for Angular Monorepo (root directory of the repo):
+
+```
+npm install
+```
+
 for container:
 
 ```
-cd container
-npm install # run this command if deploying for first time or adding/updating new packages
-ng serve 
+cd projects/container
+npm install
 ```
 
 for marketing:
 
 ```
-cd marketing
-npm install # run this command if deploying for first time or adding/updating new packages
-ng serve
+cd projects/marketing
+npm install
 ```
 
-Open your browser and navigate to http://localhost:8080 to access the _container_ application.
+for backoffice:
+
+```
+cd projects/backoffice
+npm install
+```
+
+## Start the `container`, `marketing` and `backoffice` in different terminals:
+  
+for container:
+
+```
+npm run start:container
+```
+
+for marketing:
+
+```
+npm run start:marketing
+```
+
+for backoffice:
+
+```
+npm run start:backoffice
+```
+
+You can run all applications concurrently in the same terminal by running the following script:
+
+```
+npm run start:all
+```
+
+## Navigate to container and isolated applications:
+
+Your browser will open your browser and navigate to http://localhost:8080 for the _container_ application.
 
 To access to the _marketing_ application in isolation, navigate to http://localhost:8081.
+
+To access to the _backoffice_ application in isolation, navigate to http://localhost:8082.
