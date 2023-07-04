@@ -1,2 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
 @import url('http://localhost:8081/styles.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*, *::before, *::after {
+	box-sizing: border-box;
+
+}
+body {
+	--blued:#13547a;
+	--bluel:#80d0c7;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+ 
+
+}
