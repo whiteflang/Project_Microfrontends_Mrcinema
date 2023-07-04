@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./movies-list.component.css'],
 })
 export class MoviesListComponent {
-  public title = 'Componente listar peliculas';
+
 }
