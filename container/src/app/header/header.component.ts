@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
 
 export class HeaderComponent {
 
-  public title = 'Mr Cinema';
+  public title = 'Mr.Cinema';
 }
