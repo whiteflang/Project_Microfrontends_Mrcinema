@@ -11,9 +11,9 @@ ul li {
 	padding: 0;
 }
 .navigation a {
-  margin: 0 10px;
   color: var(--inv);
   text-decoration: none;
+	margin: 0 10px;
 }
 .navigation a:hover {
   text-decoration: underline;
