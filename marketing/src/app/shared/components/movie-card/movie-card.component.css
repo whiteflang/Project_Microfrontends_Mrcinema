@@ -1,0 +1,47 @@
+.movie-card {
+  max-width: 250px;
+  color: var(--inv);
+  font-size: 12px;
+  border-radius: 10px;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.card-content {
+  background-color: var(--def);
+  border-radius: 0 0 10px 10px;
+}
+.card-content p {
+  margin-bottom: 0;
+}
+.card-content a {
+  color: var(--inv);
+  font-style: bold;
+  font-size: 15px;
+  /* font-family: PT Sans Narrow; */
+  text-decoration: none;
+}
+.percent {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0 10px 0 ;
+}
+.percent p {
+  margin: 0;
+  font: Raleway;
+}
+.progress-bar {
+  color: var(--yellow1);
+  background-color: var(--inv);
+  border-radius: 15%;
+  margin-left: 10px;
+}
+.info-card  {
+  margin-top: 10px;
+ }
+.info-card p {
+ margin: 0;
+}

@@ -1,15 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
+import { FeaturedMoviesComponent } from './components/featured-movies/featured-movies.component';
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu';
 
 export const MOVIES_ROUTES: Routes = [
   {
-    // Movies List
     path: 'list',
     component: MoviesListComponent
   }
@@ -17,15 +14,16 @@ export const MOVIES_ROUTES: Routes = [
 
 @NgModule({
   declarations: [
-    MoviesListComponent
+    MoviesListComponent,
+    FeaturedMoviesComponent
+  ],
+  exports: [
+    FeaturedMoviesComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(MOVIES_ROUTES),
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatMenuModule,
+    SharedModule,
   ]
 })
 export class MoviesModule { }
