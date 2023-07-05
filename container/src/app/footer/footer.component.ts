@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css'
   ]
 })
+
 export class FooterComponent {
+
+  public title = 'Mr.Cinema';
 
 }
