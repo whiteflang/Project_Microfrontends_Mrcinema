@@ -13,8 +13,8 @@ const routes: Routes = [
   {
     path: 'movies',
     loadChildren: () => loadRemoteModule({
-      type: 'module',
-      remoteEntry: 'http://localhost:8081/remoteEntry.js',
+      type: 'manifest',
+      remoteName: 'marketing',
       exposedModule: './MoviesModule'
     })
     .then(m => m.MoviesModule)
@@ -23,6 +23,7 @@ const routes: Routes = [
       path: 'dashboard',
       component: WebComponentWrapper,
       data: {
+        type: 'script',
         remoteEntry: 'http://localhost:8082/remoteEntry.js',
         remoteName: 'backoffice',
         exposedModule: './dashboard/App',
