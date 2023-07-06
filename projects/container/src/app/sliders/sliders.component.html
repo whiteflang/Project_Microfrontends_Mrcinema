@@ -1,0 +1,18 @@
+<div class="container-initial">
+  <div class="slider-container">
+    <button class="button-left" (click)="previousSlide()"><i-feather name="chevron-left"></i-feather></button>
+    <img [src]="currentImage" class="slider-item" alt="Slide">
+    <button class="button-right" (click)="nextSlide()"><i-feather name="chevron-right"></i-feather></button>
+    <div class="pagination">
+      <span 
+        *ngFor="let image of images; let i = index" 
+        class="pagination-dot" 
+        [class.active]="i === activeIndex"
+        (click)="goToSlide(i)">
+      </span>
+    </div>
+  </div>
+</div>
+
+
+ 

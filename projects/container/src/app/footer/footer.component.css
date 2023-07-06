@@ -10,7 +10,7 @@ footer {
 	  flex-direction: row;
 		margin: 0;
 		padding: 1em 4.5em;
-    position: fixed;
+    position: static;
     left: 0;
     bottom: 0;
     width: 100%;

@@ -7,6 +7,7 @@
 *, *::before, *::after {
 	box-sizing: border-box;
 
+
 }
 body {
 	--blued:#13547a;
@@ -23,9 +24,7 @@ nav{
 
 }
 
-title{
-  font-family: 'Rowdies', cursive;
-}
+
 
 footer{
   font-family: 'Raleway', sans-serif;
