@@ -3,8 +3,10 @@
     <nav>
 
         <div class="logo-container">
-            <img  class="logo" src="/../../assets/logo-mrcinema.png" alt="Logo cinema">
-            <h1>{{title}}</h1>
+            <a routerLink="/">
+                <img  class="logo" src="/../../assets/logo-mrcinema.png" alt="Logo cinema">
+                <span><h1>{{title}}</h1></span>
+            </a>
         </div>
 
         <ul class="navigation">
@@ -25,8 +27,8 @@
             <li>
                 <i-feather name="shopping-cart"></i-feather>
             </li>
-            <li >
-                <a class="dashboard" routerlink="/">Dashboard</a>
+            <li>
+                <a class="dashboard" routerLink="/dashboard">Dashboard</a>
             </li>
         </ul>
 
