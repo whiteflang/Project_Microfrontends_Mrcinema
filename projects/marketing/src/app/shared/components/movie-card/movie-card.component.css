@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
 .movie-card {
   max-width: 250px;
   color: var(--inv);
@@ -19,7 +21,7 @@
   color: var(--inv);
   font-style: bold;
   font-size: 15px;
-  /* font-family: PT Sans Narrow; */
+  font-family: 'PT Sans Narrow', sans-serif;
   text-decoration: none;
 }
 .percent {

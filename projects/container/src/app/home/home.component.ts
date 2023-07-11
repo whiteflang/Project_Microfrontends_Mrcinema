@@ -1,15 +1,27 @@
-import { Component } from '@angular/core';
+import { loadRemoteModule } from '@angular-architects/module-federation-runtime';
+import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  template:` 
-  <app-header></app-header>
-  <app-sliders>/</app-sliders>
-  <div style="background:white; whidth:100vh; height:80vh; " ></div>
-  <app-footer></app-footer>
-  `,
-  styles:[]
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  @ViewChild('featuredMovies', {read: ViewContainerRef}) featuredMoviesContainer!: ViewContainerRef;
 
+
+  ngOnInit(): void {
+
+    this.loadFeaturedMovies();
+  }
+
+  async loadFeaturedMovies() {
+    const m = await loadRemoteModule({
+      type: 'manifest',
+      remoteName: 'marketing',
+      exposedModule: './FeaturedMoviesComponent'
+    });
+
+    const ref = this.featuredMoviesContainer.createComponent(m.FeaturedMoviesComponent);
+  }
 }

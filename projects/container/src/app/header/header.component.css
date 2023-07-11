@@ -23,10 +23,13 @@
     font-family:'Rowdies', cursive;
     }
     .logo-container{
-    display: flex;
-	justify-content: center;
-	flex-direction: row;
-    align-items: center;
+        display: flex;
+	    justify-content: center;
+	    flex-direction: row;
+        align-items: center;
+    }
+    .logo-container a {
+        display: flex;
     }
     ul{
         list-style: none;

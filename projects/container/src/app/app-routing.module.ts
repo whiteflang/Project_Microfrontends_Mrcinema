@@ -20,6 +20,15 @@ const routes: Routes = [
     .then(m => m.MoviesModule)
   },
   {
+    path: 'candy-shop',
+    loadChildren: () => loadRemoteModule({
+      type: 'manifest',
+      remoteName: 'marketing',
+      exposedModule: './CandyShopModule'
+    })
+    .then(m => m.CandyShopModule)
+  },
+  {
       path: 'dashboard',
       component: WebComponentWrapper,
       data: {
