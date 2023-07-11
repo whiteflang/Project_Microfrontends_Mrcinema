@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Rowdies&display=swap');
 
     nav{
         background: var(--blued);
         background: linear-gradient(175deg, var(--blued) 30%, var(--bluel) 60%);
 	    display: flex;
 	    justify-content: center;
+        width: 100%;
         gap: 5em;
 	    flex-direction: row;
 		margin: 0;
-		padding: 1em 4.5em;   
+		padding: 1em 4.5em;
+        font-family: 'Raleway', sans-serif;
 	}
     a{
         text-decoration: none;
@@ -41,6 +44,7 @@
         border-top-left-radius:25px ;
         border-bottom-left-radius: 25px;
         padding: 0.9em ;
+        height:  3.5em;
     }
     button{
         border: none;
@@ -49,6 +53,7 @@
         border-bottom-right-radius: 25px;
         padding: 0.5em;
         padding-right: 1.5em;
+        height:  3.5em;
     }
     .search{
         display: flex;
