@@ -3,15 +3,13 @@ ul li {
   list-style: none;
 }
 .navigation {
-  background-color: var(--def);
+  background-color: var(--blue1);
   display: flex;
   justify-content: center;
   flex-direction: row;
-	margin: 0;
-	padding: 0;
 }
 .navigation a {
-  color: var(--inv);
+  color: var(--white1);
   text-decoration: none;
 	margin: 0 10px;
 }
@@ -23,7 +21,7 @@ ul li {
 	position: relative;
 	padding: 0.8rem 2rem;
 	font-size: 1rem;
-	color: var(--inv);
+	color: var(--white1);
 	-webkit-transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
 	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
 	cursor: pointer;
@@ -40,14 +38,14 @@ ul li {
 	z-index: 1;
 }
 .btn:hover a {
-	color: var(--def);
+	color: var(--blue1);
 	-webkit-transition-delay: .5s;
 	        transition-delay: .5s;
 	z-index: 10;
 	position: relative;
 }
 .btn a {
-	color: var(--inv);
+	color: var(--white1);
 	-webkit-transition-delay: .10s;
 	        transition-delay: .10s;
 	z-index: 10;
@@ -58,7 +56,7 @@ ul li {
 	        transition-delay: 0s;
 }
 .btn:hover::after {
-	background: var(--inv);
+	background: var(--white1);
 	-webkit-transition-delay: .35s;
 	        transition-delay: .35s;
 }
@@ -71,7 +69,7 @@ ul li {
 }
 .from-left::before {
 	right: 0;
-	border: 1px solid var(--inv);
+	border: 1px solid var(--white1);
 	border-left: 0;
 	border-right: 0;
 }
