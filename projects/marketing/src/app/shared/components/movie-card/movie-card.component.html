@@ -1,16 +1,16 @@
-<mat-card class="movie-card" title="Movie Name">
-  <img class="img-fluid" mat-card-image src="https://via.placeholder.com/385x440/ffcc44" alt="Nombre Pelicula">
+<mat-card class="movie-card" [title]="movie.title">
+  <img class="img-fluid" mat-card-image [src]="getImagen()" [alt]="movie.title">
   <mat-card-content class="card-content">
     <p><strong>Popularity</strong></p>
     <div class="percent">
-      <p>80%</p>
-      <mat-progress-bar mode="determinate" class="progress-bar" value="80"></mat-progress-bar>
+      <p>{{ movie.vote_average * 10 }}%</p>
+      <mat-progress-bar mode="determinate" class="progress-bar" [value]="movie.vote_average * 10"></mat-progress-bar>
     </div>
-    <a href="#">Movie Name</a>
+    <a class="movie-title" routerLink="/movies/movie-details" routerLinkActive="active" href="/movies/movie-details">{{ movie.title }}</a>
     <div class="info-card">
-      <p>Premiere: 05/04/2023</p>
-      <p>Genre: Action, Comedy</p>
-      <p>Duration: <strong>90 mins</strong></p>
+      <p>Premiere: {{ movie.release_date }}</p>
+      <p>Genre: {{ movie.genre_ids }}</p>
+      <p>Duration: <strong>{{ movie.id }} Min</strong></p>
     </div>
   </mat-card-content>
 </mat-card>

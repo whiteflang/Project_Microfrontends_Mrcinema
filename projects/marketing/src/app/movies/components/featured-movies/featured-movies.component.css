@@ -9,5 +9,6 @@ button {
   color: var(--white1);
   background-color: var(--blue1);
   border-radius: 15%;
-  padding: 15px;
+  padding: 2% 5%;
+  font-size: 20px;
 }

@@ -1,28 +1,25 @@
 <ul class="navigation">
-  <li class="btn from-left">
-    <a routerLink="/billboard" routerLinkActive="active" title="Billboard" href="">Billboard</a>
+  <li class="btn from-left" (click)="filterMovies(true)" [class.active]="nowPlayingFilter" title="Billboard">
+    <a>Billboard</a>
   </li>
-  <li class="btn from-left">
-    <a routerLink="/soon" routerLinkActive="active" title="Soon" href="">Soon</a>
+  <li class="btn from-left" (click)="filterMovies(false)" [class.active]="!nowPlayingFilter" title="Soon">
+    <a>Soon</a>
   </li>
 </ul>
 
 <div class="container1">
+
   <div class="featured-items">
-    <h1>Billboard</h1>
+    <h1>{{ nowPlayingFilter ? 'Billboard' : 'Soon' }}</h1>
     <div class="item">
-        <shared-movie-card></shared-movie-card>
-        <shared-movie-card></shared-movie-card>
-        <shared-movie-card></shared-movie-card>
-        <shared-movie-card></shared-movie-card>
-        <shared-movie-card></shared-movie-card>
-        <shared-movie-card></shared-movie-card>
-        <shared-movie-card></shared-movie-card>
-        <shared-movie-card></shared-movie-card>
-        <shared-movie-card></shared-movie-card>
+        <shared-movie-card class="item" *ngFor="let movie of filteredMovies" [movie]="movie"></shared-movie-card>
     </div>
   </div>
 
-</div>
+<!--   <mat-paginator [length]="30"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    aria-label="Select page">
+  </mat-paginator> -->
 
-<router-outlet></router-outlet>
+</div>

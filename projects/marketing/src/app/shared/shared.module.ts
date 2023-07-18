@@ -6,9 +6,9 @@ import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
     imports: [
-      MatCardModule, 
+      MatCardModule,
       MatButtonModule,
-      MatProgressBarModule
+      MatProgressBarModule,
     ],
     exports: [
       MovieCardComponent

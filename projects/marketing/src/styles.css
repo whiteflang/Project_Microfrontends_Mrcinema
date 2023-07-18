@@ -17,7 +17,7 @@ body {
 .container1 {
   background-color: var(--bg1);
   margin: 5% 10% 5% 10%;
-  padding: 50px;
+  padding: 3% 7%;
 }
 .featured-items {
   margin-bottom: 30px;
@@ -28,9 +28,10 @@ body {
 }
 .item {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   align-content: flex-end;
+  gap: 2rem;
 }

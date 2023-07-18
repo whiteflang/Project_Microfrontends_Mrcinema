@@ -1,24 +1,24 @@
 <div class="container1">
+
   <div class="featured-items">
     <h1>Billboard</h1>
-    <div class="item">
-        <shared-movie-card></shared-movie-card>
-        <shared-movie-card></shared-movie-card>
-        <shared-movie-card></shared-movie-card>
+    <div *ngIf="billboardMovies.length > 0" class="item">
+      <shared-movie-card class="item" *ngFor="let movie of billboardMovies" [movie]="movie"></shared-movie-card>
     </div>
     <div class="buttonc">
-      <button routerLink="/movies/list" routerLinkActive="active" title="See all">See all</button>
+      <button routerLink="/movies/list" routerLinkActive="active" title="See all" (click)="scrollStart()">See all</button>
     </div>
   </div>
+
   <div class="featured-items">
     <h1>Soon</h1>
-    <div class="item">
-        <shared-movie-card></shared-movie-card>
-        <shared-movie-card></shared-movie-card>
-        <shared-movie-card></shared-movie-card>
+    <div *ngIf="soonMovies.length > 0" class="item">
+      <shared-movie-card class="item" *ngFor="let movie of soonMovies" [movie]="movie"></shared-movie-card>
     </div>
     <div class="buttonc">
-      <button routerLink="/movies/list" routerLinkActive="active" title="See all">See all</button>
+      <button routerLink="/movies/list" routerLinkActive="active" title="See all" (click)="scrollStart()">See all</button>
     </div>
   </div>
+
+
 </div>

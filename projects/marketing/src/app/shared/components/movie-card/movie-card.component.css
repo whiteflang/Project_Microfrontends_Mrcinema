@@ -18,7 +18,7 @@
 .card-content p {
   margin: 10px 0;
 }
-.card-content a {
+.movie-title {
   color: var(--white1);
   font-style: bold;
   font-size: 15px;
