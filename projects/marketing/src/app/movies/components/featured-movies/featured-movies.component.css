@@ -1,34 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-.container {
-  background-color: var(--bg1);
-  margin: 50px;
-  padding: 50px;
-}
 .featured-items {
   margin-bottom: 30px;
-}
-.featured-items h1 {
-  margin-bottom: 25px;
-}
-.item {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: flex-end;
-  margin-bottom: 50px;
 }
 .buttonc {
   display: flex;
   justify-content: end;
 }
 button {
-  color: var(--inv);
-  background-color: var(--def);
+  color: var(--white1);
+  background-color: var(--blue1);
   border-radius: 15%;
-  padding: 15px;
+  padding: 2% 5%;
+  font-size: 20px;
 }

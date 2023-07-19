@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { MoviesModule } from './movies/movies.module';
 import { CandyShopModule } from './candy-shop/candy-shop.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CandyShopModule } from './candy-shop/candy-shop.module';
     SharedModule,
     MoviesModule,
     CandyShopModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

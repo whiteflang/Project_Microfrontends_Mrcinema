@@ -1,24 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Raleway&display=swap');
 
 .movie-card {
   max-width: 250px;
-  color: var(--inv);
+  color: var(--white1);
   font-size: 12px;
   border-radius: 10px;
+  margin-bottom: 80px;
 }
 .img-fluid {
   max-width: 100%;
   height: auto;
 }
 .card-content {
-  background-color: var(--def);
+  background-color: var(--blue1);
   border-radius: 0 0 10px 10px;
 }
 .card-content p {
-  margin-bottom: 0;
+  margin: 10px 0;
 }
-.card-content a {
-  color: var(--inv);
+.movie-title {
+  color: var(--white1);
   font-style: bold;
   font-size: 15px;
   font-family: 'PT Sans Narrow', sans-serif;
@@ -37,7 +38,7 @@
 }
 .progress-bar {
   color: var(--yellow1);
-  background-color: var(--inv);
+  background-color: var(--white1);
   border-radius: 15%;
   margin-left: 10px;
 }
@@ -46,4 +47,5 @@
  }
 .info-card p {
  margin: 0;
+ font-family: 'Raleway', sans-serif;
 }
