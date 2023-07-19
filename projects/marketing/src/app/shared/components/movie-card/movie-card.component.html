@@ -1,15 +1,14 @@
-<mat-card class="movie-card" [title]="movie.title">
-  <img class="img-fluid" mat-card-image [src]="getImagen()" [alt]="movie.title">
+<mat-card class="movie-card" [title]="movie.originalTitle">
+  <img class="img-fluid" mat-card-image [src]="getImagen()" [alt]="movie.originalTitle">
   <mat-card-content class="card-content">
     <p><strong>Popularity</strong></p>
     <div class="percent">
-      <p>{{ movie.vote_average * 10 }}%</p>
-      <mat-progress-bar mode="determinate" class="progress-bar" [value]="movie.vote_average * 10"></mat-progress-bar>
+      <p>{{ movie.voteAverage }}%</p>
+      <mat-progress-bar mode="determinate" class="progress-bar" [value]="movie.voteAverage"></mat-progress-bar>
     </div>
-    <a class="movie-title" routerLink="/movies/movie-details" routerLinkActive="active" href="/movies/movie-details">{{ movie.title }}</a>
+    <a class="movie-title" routerLink="/movies/movie-details" routerLinkActive="active">{{ movie.originalTitle }}</a>
     <div class="info-card">
-      <p>Premiere: {{ movie.release_date }}</p>
-      <p>Genre: {{ movie.genre_ids }}</p>
+      <p>Premiere: {{ movie.releaseDate }}</p>
       <p>Duration: <strong>{{ movie.id }} Min</strong></p>
     </div>
   </mat-card-content>

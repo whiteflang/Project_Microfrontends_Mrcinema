@@ -16,7 +16,7 @@ export class MovieCardComponent implements OnInit{
   }
 
   getImagen() {
-    return this.movie.poster_path !== 'N/A' ? `https://image.tmdb.org/t/p/w500${this.movie.poster_path}` : 'https://via.placeholder.com/385x440/8a8c93ac'
+    return 'https://via.placeholder.com/385x440/8a8c93ac';
   }
 
 }

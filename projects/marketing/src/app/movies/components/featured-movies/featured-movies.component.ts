@@ -9,10 +9,9 @@ import { Movie } from '../../../shared/interfaces/api.interface';
 })
 export class FeaturedMoviesComponent implements OnInit {
 
-  public movies: Movie[] = [];
-  public movieFilter: boolean = true;
   public billboardMovies: Movie[] = [];
   public soonMovies: Movie[] = [];
+  public movieFilter: boolean = true;
 
   constructor(private moviesService: APIService) {}
 
@@ -21,19 +20,13 @@ export class FeaturedMoviesComponent implements OnInit {
   }
 
   getMoviesList() {
-    this.moviesService.getMovies().subscribe(result => {
-      this.movies = result;
-      this.filterMovies(this.movieFilter);
+    this.moviesService.getNowPlayingMovies().subscribe(result => {
+      this.billboardMovies = result;
     });
-  }
 
-  filterMovies(filter: boolean) {
-    this.movieFilter = filter;
-    if (this.movieFilter)
-    this.billboardMovies = this.movies.filter(movie => movie.vote_average >= 8.4);
-    this.soonMovies = this.movies.filter(movie => movie.vote_average < 8.4);
-    this.billboardMovies = this.billboardMovies.splice(0,3);
-    this.soonMovies = this.soonMovies.splice(0,3);
+    this.moviesService.getPremiereMovies().subscribe(result => {
+      this.soonMovies = result;
+    })
   }
 
   scrollStart() {
