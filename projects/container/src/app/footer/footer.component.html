@@ -1,39 +1,34 @@
 <footer>
 
-    <div class="logo-container-footer">
-        <img  class="logo" src="/../../assets/logo-mrcinema.png" alt="Logo cinema">
-        <h1 class="title">{{title}}</h1>
-    </div>
-    
-    <div class="container-navigation">
-        <ul class="navigation-footer">
-            <li><a routerLink="/">Legal information</a></li>
-            <h1>|</h1>
-            <li><a routerlink="/">About {{title}}</a></li>
-            <h1>|</h1>
-            <li><a routerlink="/">Frequently asked questions</a></li>
-        </ul>
+  <div class="logo-container">
+    <a routerLink="/" routerLinkActive="active"><img class="logo" src="/../../assets/logo-mrcinema.png" alt="Logo cinema"></a>
+    <a routerLink="/" routerLinkActive="active"><h1 class="title">MR.Cinema</h1></a>
+  </div>
 
-        <p>©2023 {{title}}</p>
-      
-    </div>
+  <div class="container-navigation">
+    <ul class="navigation-footer">
+      <li><a routerLink="/misc/legal-info">Legal information</a></li>
+      <span class="navigation-footer-separator">|</span>
+      <li><a routerLink="/misc/about">About Mr.Cinema</a></li>
+      <span class="navigation-footer-separator">|</span>
+      <li><a routerLink="/misc/faq">FAQ</a></li>
+    </ul>
+      <p>©2023 Mr.Cinema</p>
+  </div>
 
+  <div class="container-network">
+    <p>Follow us on social media</p>
+    <ul class="container-network-log">
+      <li>
+        <i-feather name="facebook"></i-feather>
+      </li>
+      <li>
+        <i-feather name="twitter"></i-feather>
+      </li>
+      <li>
+        <i-feather name="instagram"></i-feather>
+      </li>
+    </ul>
+  </div>
 
-    <div class="container-network">
-
-        <p>Following in network</p>
-        <ul class="container-network-log">
-       
-        <li>
-            <i-feather name="facebook"></i-feather>
-        </li>
-        <li>
-            <i-feather name="twitter"></i-feather>
-        </li>
-        <li>
-            <i-feather name="instagram"></i-feather>
-        </li>
-
-        </ul>
-    </div>
 </footer>

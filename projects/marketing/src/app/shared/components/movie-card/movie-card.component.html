@@ -3,7 +3,7 @@
   <mat-card-content class="card-content">
     <p><strong>Popularity</strong></p>
     <div class="percent">
-      <p>{{ movie.voteAverage }}%</p>
+      <p>{{ movie.voteAverage * 10 }}%</p>
       <mat-progress-bar mode="determinate" class="progress-bar" [value]="movie.voteAverage"></mat-progress-bar>
     </div>
     <a class="movie-title" routerLink="/movies/movie-details" routerLinkActive="active">{{ movie.originalTitle }}</a>

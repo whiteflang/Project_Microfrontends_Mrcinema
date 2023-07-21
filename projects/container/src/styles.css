@@ -2,21 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Rowdies&display=swap');
 
-
-
 body {
 	--blued:#13547a;
 	--bluel:#80d0c7;
+  --greenlogo: #1B9C85;
 }
 
 nav{
   font-family: 'Raleway' sans-serif;
-
-}
-
-
-
-footer{
-  font-family: 'Raleway', sans-serif;
-
 }

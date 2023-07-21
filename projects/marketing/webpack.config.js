@@ -9,6 +9,7 @@ module.exports = withModuleFederationPlugin({
     './CandyShopModule': './projects/marketing/src/app/candy-shop/candy-shop.module.ts',
     './FeaturedMoviesComponent': './projects/marketing/src/app/movies/components/featured-movies/featured-movies.component.ts',
     './MovieDetailsComponent': './projects/marketing/src/app/movies/components/movie-details/movie-details.component.ts',
+    './MiscModule': './projects/marketing/src/app/misc/misc.module.ts',
   },
 
   shared: {
