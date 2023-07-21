@@ -16,7 +16,7 @@ export class MovieCardComponent implements OnInit{
   }
 
   getImagen() {
-    return 'https://via.placeholder.com/385x440/8a8c93ac';
+    return 'https://via.placeholder.com/390x460/8a8c93ac';
   }
 
 }

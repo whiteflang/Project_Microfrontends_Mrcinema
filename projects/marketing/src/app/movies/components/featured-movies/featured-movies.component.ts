@@ -21,11 +21,11 @@ export class FeaturedMoviesComponent implements OnInit {
 
   getMoviesList() {
     this.moviesService.getNowPlayingMovies().subscribe(result => {
-      this.billboardMovies = result;
+      this.billboardMovies = result.splice(0,3);
     });
 
     this.moviesService.getPremiereMovies().subscribe(result => {
-      this.soonMovies = result;
+      this.soonMovies = result.splice(0,3);
     })
   }
 

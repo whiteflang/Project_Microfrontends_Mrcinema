@@ -1,14 +1,13 @@
-.featured-items {
-  margin-bottom: 30px;
-}
 .buttonc {
   display: flex;
   justify-content: end;
 }
-button {
+a {
   color: var(--white1);
+  font-size: 1.2rem;
+  font-weight: bold;
   background-color: var(--blue1);
-  border-radius: 15%;
+  border-radius: 10%;
+  text-decoration: none;
   padding: 2% 5%;
-  font-size: 20px;
 }
