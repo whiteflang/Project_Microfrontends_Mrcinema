@@ -9,6 +9,4 @@ import { Component } from '@angular/core';
 
 export class FooterComponent {
 
-  public title = 'Mr.Cinema';
-
 }

@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { ProductListComponent } from './components/product-list/product-list.component';
 
-export const MOVIES_ROUTES: Routes = [
+export const CANDY_ROUTES: Routes = [
   {
     path: '',
     component: ProductListComponent
@@ -20,7 +20,7 @@ export const MOVIES_ROUTES: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(MOVIES_ROUTES),
+    RouterModule.forChild(CANDY_ROUTES),
     SharedModule,
   ]
 })

@@ -29,6 +29,15 @@ const routes: Routes = [
     .then(m => m.CandyShopModule)
   },
   {
+    path: 'misc',
+    loadChildren: () => loadRemoteModule({
+      type: 'manifest',
+      remoteName: 'marketing',
+      exposedModule: './MiscModule'
+    })
+    .then(m => m.MiscModule)
+  },
+  {
       path: 'dashboard',
       component: WebComponentWrapper,
       data: {
