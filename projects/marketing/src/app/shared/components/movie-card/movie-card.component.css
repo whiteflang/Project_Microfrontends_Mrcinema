@@ -36,8 +36,8 @@
   border-radius: 15%;
   margin-left: 5%;
 }
-.info-card  {
+.info-card {
   margin-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   font-family: 'Raleway', sans-serif;
  }

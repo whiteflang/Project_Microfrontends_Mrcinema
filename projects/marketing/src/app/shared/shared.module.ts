@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
-import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { RouterModule } from '@angular/router';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { RouterModule } from '@angular/router';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 @NgModule({
     imports: [
@@ -13,10 +14,12 @@ import { RouterModule } from '@angular/router';
       RouterModule
     ],
     exports: [
-      MovieCardComponent
+      MovieCardComponent,
+      ProductCardComponent
     ],
     declarations: [
       MovieCardComponent,
+      ProductCardComponent,
     ],
     providers: [],
 })
