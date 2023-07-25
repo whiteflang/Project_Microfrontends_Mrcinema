@@ -44,7 +44,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-					"builder": "ngx-build-plus:browser",
+	  "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/container",
             "index": "projects/container/src/index.html",
@@ -98,7 +98,12 @@
                   "replace": "projects/container/src/environments/environment.ts",
                   "with": "projects/container/src/environments/environment.local.ts"
                 }
-              ]
+              ],
+	      "stylePreprocessorOptions": {
+                "includePaths": [
+              	  "projects/container/src/remote-styles-development.css"
+                ]
+              }
             },
             "test": {
               "buildOptimizer": false,
@@ -112,13 +117,18 @@
                   "replace": "projects/container/src/environments/environment.ts",
                   "with": "projects/container/src/environments/environment.test.ts"
                 }
-              ]
+              ],
+	      "stylePreprocessorOptions": {
+                "includePaths": [
+              	  "projects/container/src/remote-styles-test.css"
+                ]
+              }
             }
           },
           "defaultConfiguration": "local"
         },
         "serve": {
-					"builder": "ngx-build-plus:dev-server",
+	 "builder": "ngx-build-plus:dev-server",
           "configurations": {
             "production": {
               "browserTarget": "container:build:production"
@@ -130,8 +140,7 @@
               "browserTarget": "container:build:local"
             },
             "test": {
-						  "publicHost": "http://test.container.mrcinema.yuju/",
-              "port": 80,
+	      "publicHost": "http://test.container.mrcinema.yuju/",
               "browserTarget": "container:build:test"
             }
           },
