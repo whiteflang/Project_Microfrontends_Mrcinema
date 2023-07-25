@@ -22,7 +22,7 @@
               "tsConfig": "projects/cinema-sdk/tsconfig.lib.json"
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "development"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -85,9 +85,37 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "local": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/container/src/environments/environment.ts",
+                  "with": "projects/container/src/environments/environment.local.ts"
+                }
+              ]
+            },
+            "test": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/container/src/environments/environment.ts",
+                  "with": "projects/container/src/environments/environment.test.ts"
+                }
+              ]
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "local"
         },
         "serve": {
 					"builder": "ngx-build-plus:dev-server",
@@ -97,9 +125,17 @@
             },
             "development": {
               "browserTarget": "container:build:development"
+            },
+            "local": {
+              "browserTarget": "container:build:local"
+            },
+            "test": {
+						  "publicHost": "http://test.container.mrcinema.yuju/",
+              "port": 80,
+              "browserTarget": "container:build:test"
             }
           },
-          "defaultConfiguration": "development",
+          "defaultConfiguration": "local",
           "options": {
             "publicHost": "http://localhost:8080",
             "port": 8080,
@@ -183,9 +219,31 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "local": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/marketing/src/environments/environment.ts",
+                  "with": "projects/marketing/src/environments/environment.local.ts"
+                }
+              ]
+            },
+            "test": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/marketing/src/environments/environment.ts",
+                  "with": "projects/marketing/src/environments/environment.test.ts"
+                }
+              ]
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "local"
         },
         "serve": {
           "builder": "ngx-build-plus:dev-server",
@@ -196,9 +254,16 @@
             },
             "development": {
               "browserTarget": "marketing:build:development"
+            },
+            "local": {
+              "browserTarget": "marketing:build:local"
+            },
+            "test": {
+						  "publicHost": "http://test.marketing.mrcinema.yuju/",
+              "browserTarget": "marketing:build:test"
             }
           },
-          "defaultConfiguration": "development",
+          "defaultConfiguration": "local",
           "options": {
 						"publicHost": "http://localhost:8081/",
 						"port": 8081,
