@@ -1,4 +1,5 @@
-@import url('http://localhost:8081/styles.css');
+@import './remote-styles-development.css';
+@import './remote-styles-test.css';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Rowdies&display=swap');
 
