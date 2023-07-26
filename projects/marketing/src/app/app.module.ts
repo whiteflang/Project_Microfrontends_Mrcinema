@@ -9,6 +9,8 @@ import { SharedModule } from './shared/shared.module';
 import { MoviesModule } from './movies/movies.module';
 import { CandyShopModule } from './candy-shop/candy-shop.module';
 import { MiscModule } from './misc/misc.module';
+import { IconsModule } from './shared/icons/icons.module';
+// import { IconsModule } from './../../../container/src/app/icons/icons.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { MiscModule } from './misc/misc.module';
     MoviesModule,
     CandyShopModule,
     MiscModule,
+    IconsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

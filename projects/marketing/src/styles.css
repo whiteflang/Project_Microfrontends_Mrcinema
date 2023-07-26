@@ -1,9 +1,9 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
 * {
   margin: 0;
   padding: 0;
-}
-*, *::before, *::after {
-	box-sizing: border-box;
 }
 body {
 	--blue1:#13547a;
@@ -11,9 +11,11 @@ body {
 	--white1: #FFF;
 	--yellow1: #FFDE30;
 	--bg1: #DBDFEA;
+  --cyan1: #0cbb9b;
+  --cyan2: #0c8e76;
 	font-family: 'Open Sans', sans-serif;
 }
-/* Contenido */
+/* Movies Container*/
 .container1 {
   background-color: var(--bg1);
   margin: 3% 10% 3% 10%;
@@ -21,7 +23,7 @@ body {
 }
 .featured-items h1 {
   margin-bottom: 3%;
-  font-weight: bolder;
+  font-weight: bold;
 }
 .item {
   display: flex;
@@ -31,4 +33,23 @@ body {
   align-items: center;
   align-content: flex-end;
   gap: 2.9rem;
+}
+/* Candy-Shop Container*/
+.container2 {
+  margin: 3% 5% 3% 5%;
+  padding: 3% 5%;
+}
+.featured-items2 h1 {
+  margin-bottom: 3%;
+  font-weight: bold;
+  text-align: center;
+}
+.item2 {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-end;
+  gap: 2rem;
 }

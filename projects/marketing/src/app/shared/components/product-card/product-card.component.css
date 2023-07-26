@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Raleway&display=swap');
+
+/* Product Card */
+.movie-card {
+  max-width: 220px;
+  color: var(--white1);
+  font-size: 80%;
+  border-radius: 3%;
+  margin-bottom: 2rem;
+}
+.card-content {
+  background-color: var(--blue1);
+  border-radius: 0 0 3% 3%;
+  padding: 1rem 2rem 2rem 1.5rem;
+}
+.product-title {
+  color: var(--white1);
+  font-style: bold;
+  font-size: 120%;
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-decoration: none;
+}
+.info-card {
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  font-family: 'Raleway', sans-serif;
+ }
+/* Product Selector */
+.add-psc {
+  margin-top: 1rem;
+}
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.quantity-selector input {
+  width: 6rem;
+  margin-left: 1rem;
+}
+.add-cart-btn {
+  background-color: var(--cyan1);
+  color: #fff;
+  font-size: medium;
+  width: 10.5rem;
+  border: none;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  margin-bottom: 0.5rem;
+}
+.add-cart-btn:hover {
+  background-color: var(--cyan2);
+}
+.cart-icon {
+  margin-right: 1rem;
+}
