@@ -8,13 +8,13 @@ const path = require("path");
 module.exports = function override(config, env) {
   config.mode = 'development' 
   config.output = {
-   publicPath: 'http://localhost:8082/' 
+    publicPath: process.env.REACT_APP_URL,
   }
   config.devServer = {
     static: {
       directory: path.join(__dirname, "public"),
     },
-    port: 8082,
+    port: process.env.REACT_APP_PORT,
   }
   config.plugins.push(
     new ModuleFederationPlugin({

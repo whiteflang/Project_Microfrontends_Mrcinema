@@ -9,8 +9,8 @@
     "start:all": "concurrently \"npm run start:container\" \"npm run start:marketing\" \"npm run start:backoffice\" ",
     "start:test:container": "ng serve container --configuration=test",
     "start:test:marketing": "ng serve marketing --configuration=test",
-    "start:test:backoffice": "cd projects/backoffice && npm run start",
-    "start:test:all": "concurrently \"npm run start:test:container\" \"npm run start:test:marketing\" \"npm run start:backoffice\" ",
+    "start:test:backoffice": "cd projects/backoffice && npm run start:test",
+    "start:test:all": "concurrently \"npm run start:test:container\" \"npm run start:test:marketing\" \"npm run start:test:backoffice\" ",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
