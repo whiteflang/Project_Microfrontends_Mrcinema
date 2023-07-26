@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { IconsModule } from './icons/icons.module';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 
@@ -11,7 +12,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
       MatCardModule,
       MatButtonModule,
       MatProgressBarModule,
-      RouterModule
+      RouterModule,
+      IconsModule
     ],
     exports: [
       MovieCardComponent,

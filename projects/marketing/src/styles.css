@@ -11,6 +11,8 @@ body {
 	--white1: #FFF;
 	--yellow1: #FFDE30;
 	--bg1: #DBDFEA;
+  --cyan1: #0cbb9b;
+  --cyan2: #0c8e76;
 	font-family: 'Open Sans', sans-serif;
 }
 /* Movies Container*/
@@ -34,7 +36,6 @@ body {
 }
 /* Candy-Shop Container*/
 .container2 {
-  /* background-color: var(--bg1); */
   margin: 3% 5% 3% 5%;
   padding: 3% 5%;
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Raleway&display=swap');
 
 .movie-card {
-  max-width: 250px;
+  max-width: 240px;
   color: var(--white1);
   font-size: 80%;
   border-radius: 3%;
