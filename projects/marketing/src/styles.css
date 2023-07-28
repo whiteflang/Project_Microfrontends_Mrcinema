@@ -8,11 +8,16 @@
 body {
 	--blue1:#13547a;
 	--blue2:#80d0c7;
-	--white1: #FFF;
+  --black1: black;
+	--white1: white;
+  --grey1: #DBDFEA;
+  --grey2: #D9D9D9;
 	--yellow1: #FFDE30;
 	--bg1: #DBDFEA;
   --cyan1: #0cbb9b;
   --cyan2: #0c8e76;
+  --greenlogo: #1B9C85;
+  --greenlogo2: #99D9D2;
 	font-family: 'Open Sans', sans-serif;
 }
 /* Movies Container*/
