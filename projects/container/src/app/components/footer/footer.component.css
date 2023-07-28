@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
-
 @media only screen and (max-width: 768px) {
   footer,
   .navigation-footer {
@@ -19,16 +17,16 @@
 
 footer {
   width: 100%;
-  background-color:#DBDFEA;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  background-color: var(--grey1);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 5em;
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
   margin: 0;
-  padding: 1rem 4rem 4rem 4rem;
+  padding: 1rem 3rem 4rem 3rem;
 }
 .logo-container{
   display: flex;
@@ -38,15 +36,15 @@ footer {
 }
 .logo{
   display: block;
-  width: 6.375em;
-  height: 4.438em;
+  width: 6.5rem;
+  height: 5rem;
 }
 .title{
   color: var(--greenlogo);
   justify-content: center;
   font-family:  'Rowdies', cursive;
   font-size: medium;
-  margin: 3rem 0.5rem 0 0.5rem;
+  margin: 3rem 0.5rem 0 0.7rem;
 }
 .container-navigation {
   display: flex;
@@ -70,7 +68,7 @@ ul {
   padding: 0;
 }
 a {
-  color: black;
+  color: var(--black1);
   text-decoration: none;
   text-align: center;
 }
