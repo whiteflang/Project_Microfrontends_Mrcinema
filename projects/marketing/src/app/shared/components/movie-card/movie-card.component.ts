@@ -19,4 +19,11 @@ export class MovieCardComponent implements OnInit{
     return 'https://via.placeholder.com/390x460/8a8c93ac';
   }
 
+  getMovieName() {
+    const title = this.movie.originalTitle;
+    return title.length > 65
+           ? `${title.slice(0, 61)} ...`
+           : title;
+  }
+
 }

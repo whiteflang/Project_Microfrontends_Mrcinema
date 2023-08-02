@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { APIService } from '../../../shared/services/api.service';
 import { Movie } from '../../../shared/interfaces/api.interface';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-movies-list',
@@ -14,20 +16,29 @@ export class MoviesListComponent implements OnInit {
   public filteredMovies: Movie[] = [];
   public nowPlayingFilter: boolean = true;
 
-  constructor(private moviesService: APIService) {}
+  public readonly soon = 'soon';
+  public readonly billboard = 'billboard';
+
+  constructor(private moviesService: APIService, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.getMoviesList();
+    this.route.params.subscribe(params => {
+      const filter = params['filter'];
+      this.nowPlayingFilter = filter !== 'soon';
+      this.getMoviesList();
+    });
   }
 
   getMoviesList() {
-    this.moviesService.getNowPlayingMovies().subscribe(result => {
-      this.nowPlayingMovies = result;
+    forkJoin([
+      this.moviesService.getNowPlayingMovies(),
+      this.moviesService.getPremiereMovies()
+    ])
+    .subscribe(([nowPlayingMovies, premiereMovies]) => {
+      this.nowPlayingMovies = nowPlayingMovies;
+      this.premiereMovies = premiereMovies;
       this.filterMovies(this.nowPlayingFilter);
     });
-    this.moviesService.getPremiereMovies().subscribe(result => {
-      this.premiereMovies = result;
-    })
   }
 
   filterMovies(nowPlaying: boolean) {

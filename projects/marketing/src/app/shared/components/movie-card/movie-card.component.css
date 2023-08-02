@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Raleway&display=swap');
 
-.movie-card {
+.item-card {
   max-width: 240px;
   color: var(--white1);
   font-size: 80%;
@@ -11,8 +11,12 @@
   background-color: var(--blue1);
   border-radius: 0 0 3% 3%;
   padding: 1rem 2rem 2rem 1.5rem;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.movie-title {
+.item-title {
   color: var(--white1);
   font-style: bold;
   font-size: 120%;

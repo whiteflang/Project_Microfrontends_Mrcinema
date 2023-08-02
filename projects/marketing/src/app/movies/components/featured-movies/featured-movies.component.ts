@@ -13,6 +13,9 @@ export class FeaturedMoviesComponent implements OnInit {
   public soonMovies: Movie[] = [];
   public movieFilter: boolean = true;
 
+  public readonly soon = 'soon';
+  public readonly billboard = 'billboard';
+
   constructor(private moviesService: APIService) {}
 
   ngOnInit() {
@@ -32,4 +35,5 @@ export class FeaturedMoviesComponent implements OnInit {
   scrollStart() {
     window.scroll({ top: 0 });
   }
+
 }
