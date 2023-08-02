@@ -9,7 +9,7 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
 
 export const MOVIES_ROUTES: Routes = [
   {
-    path: 'list',
+    path: 'list/:filter',
     component: MoviesListComponent
   },
   {

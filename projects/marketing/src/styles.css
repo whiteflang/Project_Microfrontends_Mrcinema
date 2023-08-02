@@ -41,6 +41,7 @@ body {
 }
 /* Candy-Shop Container*/
 .container2 {
+  background-color: var(--bg1);
   margin: 3% 5% 3% 5%;
   padding: 3% 5%;
 }

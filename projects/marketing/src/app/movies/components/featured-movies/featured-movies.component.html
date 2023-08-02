@@ -6,7 +6,7 @@
       <shared-movie-card *ngFor="let movie of billboardMovies" [movie]="movie"></shared-movie-card>
     </div>
     <div class="buttonc">
-      <a routerLink="/movies/list" title="See all" (click)="scrollStart()">See all</a>
+      <a routerLink="/movies/list/billboard" title="See all" (click)="scrollStart()">See all</a>
     </div>
   </div>
 
@@ -16,9 +16,8 @@
       <shared-movie-card *ngFor="let movie of soonMovies" [movie]="movie"></shared-movie-card>
     </div>
     <div class="buttonc">
-      <a routerLink="/movies/list" title="See all" (click)="scrollStart()">See all</a>
+      <a routerLink="/movies/list/soon" title="See all" (click)="scrollStart()">See all</a>
     </div>
   </div>
-
 
 </div>
