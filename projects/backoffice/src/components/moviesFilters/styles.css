@@ -30,7 +30,7 @@
     background-color: #13547A;
     margin-top: auto; 
     margin-right: auto;
-    margin-bottom: 85px
+    margin-bottom: 85px;    
            
 }
 
@@ -51,10 +51,10 @@
     flex-basis: 100%;
     display: flex;
     justify-content: center;
+    
   }
   
-  .btn {
-    
+  .btn {    
     max-width: 200px;
     height: 35px;
     font-family: Raleway;
@@ -66,4 +66,5 @@
     line-height: normal;
     border-radius: 6px;
     background-color: #13547A;
+  
   }

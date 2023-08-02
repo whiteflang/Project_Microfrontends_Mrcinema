@@ -17,6 +17,12 @@
 
 }
 
-.sidebar a {
-    text-decoration: none;
+
+
+.aside {
+    
+        background-color: #f0f0f0;
+        padding: 1rem;
+        width: 200px;
+        text-decoration: none;
 }
