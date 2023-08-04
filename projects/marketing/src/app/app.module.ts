@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { MoviesModule } from './movies/movies.module';
 import { CandyShopModule } from './candy-shop/candy-shop.module';
+import { MiscModule } from './misc/misc.module';
+import { IconsModule } from './shared/icons/icons.module';
+// import { IconsModule } from './../../../container/src/app/icons/icons.module';
 
 @NgModule({
   declarations: [
@@ -18,8 +22,11 @@ import { CandyShopModule } from './candy-shop/candy-shop.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
+    HttpClientModule,
     MoviesModule,
     CandyShopModule,
+    MiscModule,
+    IconsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

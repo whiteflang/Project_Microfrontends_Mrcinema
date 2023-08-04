@@ -1,26 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Raleway&display=swap');
 
-.movie-card {
-  max-width: 250px;
-  color: var(--inv);
-  font-size: 12px;
-  border-radius: 10px;
-}
-.img-fluid {
-  max-width: 100%;
-  height: auto;
+.item-card {
+  max-width: 240px;
+  color: var(--white1);
+  font-size: 80%;
+  border-radius: 3%;
+  margin-bottom: 2rem;
 }
 .card-content {
-  background-color: var(--def);
-  border-radius: 0 0 10px 10px;
+  background-color: var(--blue1);
+  border-radius: 0 0 3% 3%;
+  padding: 1rem 2rem 2rem 1.5rem;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.card-content p {
-  margin-bottom: 0;
-}
-.card-content a {
-  color: var(--inv);
+.item-title {
+  color: var(--white1);
   font-style: bold;
-  font-size: 15px;
+  font-size: 120%;
   font-family: 'PT Sans Narrow', sans-serif;
   text-decoration: none;
 }
@@ -29,7 +28,7 @@
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  margin: 10px 0 10px 0 ;
+  margin: 5% 0 5% 0 ;
 }
 .percent p {
   margin: 0;
@@ -37,13 +36,12 @@
 }
 .progress-bar {
   color: var(--yellow1);
-  background-color: var(--inv);
+  background-color: var(--white1);
   border-radius: 15%;
-  margin-left: 10px;
+  margin-left: 5%;
 }
-.info-card  {
-  margin-top: 10px;
+.info-card {
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  font-family: 'Raleway', sans-serif;
  }
-.info-card p {
- margin: 0;
-}
