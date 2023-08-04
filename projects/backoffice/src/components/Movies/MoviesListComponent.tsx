@@ -2,9 +2,6 @@ import { tap } from "rxjs";
 import MoviesListService from "../../services/MoviesListService";
 import React, { useState, useEffect } from "react";
 import { Movie } from "../../services/MoviesListService";
-import 'feather-icons-react/dist/feather.css';
-import { Heart } from 'feather-icons-react';
-
 
 export function MoviesListComponent() {
   const [movies, setMovies] = useState<Movie[]>([]);
